@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>title</title>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css">      
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+		<p id="dataTest"></p>
+
+<!--		 colour code could be done by getting all class that are "year" and checking the inner html and applying color based on that-->
+		
+		<!--		23:28 -->
+		<div class="team-card">
+			<div class="team-card__top">
+				<div class="team-card__top__left">
+					<img class="team-logo" src="/images/manchesteru.png">
+				</div>
+				<div class="team-card__top__right">
+					<p class="team-name">Manchester United</p>
+				</div>
+			</div>
+
+			<div class="team-card__bottom">
+				<div class="team-card__bottom__row">					
+					<div class="team-card__bottom__row__left">Winner</div>
+					<div class="team-card__bottom__row__right">
+						<div class="year">2007/08</div>
+						<div class="year">2007/08</div>
+						<div class="year">2007/08</div>
+						<div class="year">2007/08</div>
+					</div>	
+				</div>
+
+				<div class="team-card__bottom__row">					
+					<div class="team-card__bottom__row__left">Runner Up</div>
+					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+				</div>
+
+				<div class="team-card__bottom__row">					
+					<div class="team-card__bottom__row__left">Runner Up</div>
+					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+				</div>
+
+				<div class="team-card__bottom__row">					
+					<div class="team-card__bottom__row__left">Runner Up</div>
+					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+				</div>
+
+				<div class="team-card__bottom__row">					
+					<div class="team-card__bottom__row__left">Runner Up</div>
+					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+				</div>
+
+				<div class="team-card__bottom__row">					
+					<div class="team-card__bottom__row__left">Runner Up</div>
+					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+				</div>
+
+			</div>
+		</div>
+
+
+
+
+		<script>
+
+			var teamData = {
+   "teams":[
+      {
+         "name":"Manchester United",
+         "results":[
+            {
+               "winner":"2000/01",
+               "runnerUp":"2000/02",
+               "semiFinal":"2000/01",
+               "quarterFinal":"2000/11111",
+               "last16":"2000/01",
+               "groups":"2000/01"
+            }
+         ]
+      },
+      {
+         "name":"Arsenal",
+         "results":[
+            {
+               "winner":"2000/01",
+               "runnerUp":"2000/02",
+               "semiFinal":"2000/01",
+               "quarterFinal":[
+                  "2000/222222",
+                  "3003"
+               ],
+               "last16":"2000/01",
+               "groups":"2000/01"
+            }
+         ]
+      },
+      {
+         "name":"Chelsea",
+         "results":[
+            {
+               "winner":"2000/01",
+               "runnerUp":"2000/02",
+               "semiFinal":"2000/01",
+               "quarterFinal":"2000/333333",
+               "last16":"2000/01",
+               "groups":"2000/01"
+            }
+         ]
+      }
+   ]
+}				
+
+
+
+
+			document.getElementById("dataTest").innerHTML =
+			teamData.teams[1].name + teamData.teams[1].results[0].quarterFinal;
+
+
+			const team = teamData.teams.find(element => element.name === "Arsenal");
+			console.log(team);
+			console.log(team.results[0].quarterFinal[1])
+
+		</script>
+
+
+
+	</body>
+</html>
