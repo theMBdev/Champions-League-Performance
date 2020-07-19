@@ -9,11 +9,19 @@
 	</head>
 	<body>
 
-		<p id="dataTest"></p>
+		<div class="title">
+				<h2>Champions League</h2>
+		<p>15 year history of 2019/20 qualified teams</p>
+		</div>
+
+		
+		<div class="grid-container">
+			<p id="dataTest"></p>
+		</div>
 
 		<script>
 			//maybe create scraper for the data
-			
+
 			var teamData = {
 				"teams":[
 					{
@@ -29,25 +37,27 @@
 						]
 					},
 					{
-						"name":"Arsenal",
+						"name":"Barcelona",
+						"image":"barcelona.png",
 						"results":[
-							{   "winner": [{date: "2007/08"}]} ,
-							{	"runnerUp": [{date: "2010/11"}, {date: "2008/09"}]} ,
-							{	"semiFinal": [ {date: "2006/07"}]} ,
-							{	"quarterFinal": [{date: "2018/19"}, {date: "2013/14"}, {date: "2009/10"}]} ,
-							{	"last16": [{date: "2017/18"}]} ,
-							{	"groups": [{date: "2015/16"}, {date: "2012/13"}, {date: "2011/12"}, {date: "2005/06"},]}
+							{   "winner": [{date: "2014/15"}, {date: "2010/11"}, {date: "2008/09"}, {date: "2005/06"}]} ,
+							{	"runnerUp": [] } ,
+							{	"semiFinal": [ {date: "2012/13"}, {date: "2011/12"}, {date: "2009/10"}, {date: "2007/08"}]} ,
+							{	"quarterFinal": [{date: "2017/18"}, {date: "2016/17"}, {date: "2015/16"}, {date: "2013/14"}]} ,
+							{	"last16": [{date: "2006/07"}]} ,
+							{	"groups": []}
 						]
 					},
 					{
-						"name":"Chelsea",
+						"name":"Real Madrid",
+						"image":"realmadrid.png",
 						"results":[
-							{   "winner": [{date: "2007/08"}]} ,
-							{	"runnerUp": [{date: "2010/11"}, {date: "2008/09"}]} ,
-							{	"semiFinal": [ {date: "2006/07"}]} ,
+							{   "winner": [{date: "2017/18"}, {date: "2016/17"}, {date: "2015/16"}, {date: "2013/14"}]} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": [ {date: "2014/15"}, {date: "2012/13"}, {date: "2011/12"}, {date: "2010/11"}]} ,
 							{	"quarterFinal": [{date: "2018/19"}, {date: "2013/14"}, {date: "2009/10"}]} ,
-							{	"last16": [{date: "2017/18"}]} ,
-							{	"groups": [{date: "2015/16"}, {date: "2012/13"}, {date: "2011/12"}, {date: "2005/06"},]}
+							{	"last16": [{date: "2009/10"}, {date: "2008/09"}, {date: "2007/08"}, {date: "2006/07"}, {date: "2005/06"}]} ,
+							{	"groups": []}
 						]
 					},					
 				]
@@ -104,10 +114,6 @@
 				return cssStyle
 			}
 
-
-			console.log("CS", colorSetter("2000/01"));
-
-
 			teamData.teams.forEach(team => {
 				team.name;
 				console.log(team.name);		
@@ -118,7 +124,6 @@
 				var quarterFinalDates = [];
 				var last16Dates = [];
 				var groupsDates = [];
-
 
 				team.results.forEach(stage => {
 
@@ -167,16 +172,13 @@
 
 				})
 
-
-
-				//				const markup = `<div class="">${team.name}</div>`
 				const markup = `<div class="team-card">
 					<div class="team-card__top">
 						<div class="team-card__top__left">
 							<img class="team-logo" src="/images/${team.image}">
 						</div>
 						<div class="team-card__top__right">
-							<p class="team-name">${team.name}</p>
+							<h3 class="team-name">${team.name}</h3>
 						</div>
 					</div>
 
@@ -243,12 +245,7 @@
 
 				document.getElementById("dataTest").innerHTML += markup;
 
-
-				console.log(team.results);
-
-
-
-			})		
+				})		
 
 
 		</script>
