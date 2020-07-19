@@ -72,12 +72,83 @@ body {
     display: none;
 }
 
-.color1 {
-	color: aqua;
-	border-color: aliceblue;
+/*https://coolors.co/gradient-palette/f92323-65ff18?number=15*/
+.color05 {
+	color: #F92323;
+	border-color: #F92323;
 }
 
-.color2 {
-	color: red;
-	border-color: green;
+.color06 {
+	color: #EE3322;
+	border-color: #EE3322;
+}
+
+.color07 {
+	color: #E44221;
+	border-color: #E44221;
+}
+
+.color08 {
+	color: #D95221;
+	border-color: #D95221;
+}
+
+.color09 {
+	color: #CF6220;
+	border-color: #CF6220;
+}
+
+.color10 {
+	color: #C4721F;
+	border-color: #C4721F;
+}
+
+.color11 {
+	color: #BA811E;
+	border-color: #BA811E;
+}
+
+.color12 {
+	color: #AF911E;
+	border-color: #AF911E;
+}
+
+.color13 {
+	color: #A4A11D;
+	border-color: #A4A11D;
+}
+
+.color14 {
+	color: #9AB01C;
+	border-color: #9AB01C;
+}
+
+.color15 {
+	color: #8FC01B;
+	border-color: #8FC01B;
+}
+
+.color16 {
+	color: #85D01A;
+	border-color: #85D01A;
+}
+
+.color17 {
+	color: #7AE01A;
+	border-color: #7AE01A;
+}
+
+.color18 {
+	color: #70EF19;
+	border-color: #70EF19;
+}
+
+.color19 {
+	color: #70EF19;
+	border-color: #70EF19;
+}
+
+.color20 {
+	color: #65FF18;
+	border-color: #65FF18;
 }

@@ -11,9 +11,6 @@
 
 		<p id="dataTest"></p>
 
-		<!--		 colour code could be done by getting all class that are "year" and checking the inner html and applying color based on that-->
-
-		<!--		23:28 -->
 		<div class="team-card">
 			<div class="team-card__top">
 				<div class="team-card__top__left">
@@ -78,158 +75,234 @@
 
 		<script>
 
+			//maybe create scraper for the data
+			
 			var teamData = {
 				"teams":[
 					{
 						"name":"Manchester United",
 						"image":"manchesteru.png",
 						"results":[
-							{   "winner": ["2000/01", "2010/02"]} ,
-							{	"runnerUp": ["2000/011", "2010/02"]} ,
-							{	"semiFinal": ["2000/01"]} ,
-							{	"quarterFinal": ["2000/01"]} ,
-							{	"last16": ["2000/01", "2010/02"]} ,
-							{	"groups": ["2000/01", "2010/02"]}
+							{   "winner": [{date: "2007/08"}]} ,
+							{	"runnerUp": [{date: "2010/11"}, {date: "2008/09"}]} ,
+							{	"semiFinal": [ {date: "2006/07"}]} ,
+							{	"quarterFinal": [{date: "2018/19"}, {date: "2013/14"}, {date: "2009/10"}]} ,
+							{	"last16": [{date: "2017/18"}]} ,
+							{	"groups": [{date: "2015/16"}, {date: "2012/13"}, {date: "2011/12"}, {date: "2005/06"},]}
 						]
 					},
 					{
 						"name":"Arsenal",
 						"results":[
-							{   "winner": ["2000/01", "2010/033"]} ,
-							{	"runnerUp": ["2000/05", "2010/02"]} ,
-							{	"semiFinal": ["2000/01"]} ,
-							{	"quarterFinal": ["2000/01"]} ,
-							{	"last16": ["2000/01", "2010/02"]} ,
-							{	"groups": ["2000/01", "2010/02"]}
+							{   "winner": [{date: "2007/08"}]} ,
+							{	"runnerUp": [{date: "2010/11"}, {date: "2008/09"}]} ,
+							{	"semiFinal": [ {date: "2006/07"}]} ,
+							{	"quarterFinal": [{date: "2018/19"}, {date: "2013/14"}, {date: "2009/10"}]} ,
+							{	"last16": [{date: "2017/18"}]} ,
+							{	"groups": [{date: "2015/16"}, {date: "2012/13"}, {date: "2011/12"}, {date: "2005/06"},]}
 						]
 					},
 					{
 						"name":"Chelsea",
 						"results":[
-							{   "winner": ["2000/01", "2010/02"]} ,
-							{	"runnerUp": ["2000/01", "2010/02"]} ,
-							{	"semiFinal": ["2000/01"]} ,
-							{	"quarterFinal": ["2000/01"]} ,
-							{	"last16": ["2000/01", "2010/02"]} ,
-							{	"groups": ["2000/01", "2010/02"]}
+							{   "winner": [{date: "2007/08"}]} ,
+							{	"runnerUp": [{date: "2010/11"}, {date: "2008/09"}]} ,
+							{	"semiFinal": [ {date: "2006/07"}]} ,
+							{	"quarterFinal": [{date: "2018/19"}, {date: "2013/14"}, {date: "2009/10"}]} ,
+							{	"last16": [{date: "2017/18"}]} ,
+							{	"groups": [{date: "2015/16"}, {date: "2012/13"}, {date: "2011/12"}, {date: "2005/06"},]}
 						]
-					}
+					},					
 				]
-			}				
+			}		
+
+			// color setter 
+			// sets color of date based on how far in the past it is
+			function colorSetter(input) {
+				var cssStyle;
+				switch(input) {
+					case "2005/06":
+						cssStyle = "color05";
+						break;
+					case "2006/07":
+						cssStyle = "color06";
+						break;
+					case "2007/08":
+						cssStyle = "color07";
+						break;
+					case "2008/09":
+						cssStyle = "color08";
+						break;
+					case "2009/10":
+						cssStyle = "color09";
+						break;
+					case "2010/11":
+						cssStyle = "color10";
+						break;
+					case "2011/12":
+						cssStyle = "color11";
+						break;
+					case "2012/13":
+						cssStyle = "color12";
+						break;
+					case "2013/14":
+						cssStyle = "color13";
+						break;
+					case "2014/15":
+						cssStyle = "color14";
+						break;
+					case "2015/16":
+						cssStyle = "color15";
+						break;
+					case "2016/17":
+						cssStyle = "color16";
+						break;
+					case "2017/18":
+						cssStyle = "color17";
+						break;
+					case "2018/19":
+						cssStyle = "color18";
+						break;
+				}
+				return cssStyle
+			}
+
+
+			console.log("CS", colorSetter("2000/01"));
 
 
 			teamData.teams.forEach(team => {
 				team.name;
 				console.log(team.name);		
-				
+
 				var winnerDates = [];
 				var runnerUpDates = [];
 				var semiFinalDates = [];
-				
-				
+				var quarterFinalDates = [];
+				var last16Dates = [];
+				var groupsDates = [];
+
+
 				team.results.forEach(stage => {
-//					console.log("stage", stage);
-
-					//					stage.forEach(test => {
-					//						console.log(test);
-					//					})
-					//					
-
 
 					// Create the dates
 					if(stage.winner){
-						winnerDates = stage.winner;
+						stage.winner.forEach(item => {	
+							item.color = colorSetter(item.date);					
+						})
+						winnerDates = stage.winner;	
 					}											
 
 					if(stage.runnerUp){
-						runnerUpDates = stage.runnerUp
+						stage.runnerUp.forEach(item => {	
+							item.color = colorSetter(item.date);					
+						})
+						runnerUpDates = stage.runnerUp;	
 					}
 
 					if(stage.semiFinal){
-						semiFinalDates = stage.semiFinal
+						stage.semiFinal.forEach(item => {	
+							item.color = colorSetter(item.date);					
+						})
+						semiFinalDates = stage.semiFinal;	
 					}
 
 					if(stage.quarterFinal){
-						stage.quarterFinal
+						stage.quarterFinal.forEach(item => {	
+							item.color = colorSetter(item.date);					
+						})
+						quarterFinalDates = stage.quarterFinal;	
 					}
 
 					if(stage.last16){
-						stage.last16
+						stage.last16.forEach(item => {	
+							item.color = colorSetter(item.date);					
+						})
+						last16Dates = stage.last16;	
 					}
 
 					if(stage.groups){
-						stage.groups
+						stage.groups.forEach(item => {	
+							item.color = colorSetter(item.date);					
+						})
+						groupsDates = stage.groups;	
 					}
 
 				})
-				
-				
 
-//				const markup = `<div class="">${team.name}</div>`
+
+
+				//				const markup = `<div class="">${team.name}</div>`
 				const markup = `<div class="team-card">
-									<div class="team-card__top">
-										<div class="team-card__top__left">
-											<img class="team-logo" src="/images/${team.image}">
-										</div>
-										<div class="team-card__top__right">
-											<p class="team-name">${team.name}</p>
-										</div>
-									</div>
+					<div class="team-card__top">
+						<div class="team-card__top__left">
+							<img class="team-logo" src="/images/${team.image}">
+						</div>
+						<div class="team-card__top__right">
+							<p class="team-name">${team.name}</p>
+						</div>
+					</div>
 
-								<div class="team-card__bottom">
-									<div class="team-card__bottom__row">					
-										<div class="team-card__bottom__row__left">Winner</div>
-										<div class="team-card__bottom__row__right">
+					<div class="team-card__bottom">
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Winner</div>
+							<div class="team-card__bottom__row__right">
 
-											 ${winnerDates.map(function (key) {
-												return "<div class='year color2'>" + key + "</div>"        
-											}).join("")}
-											
-										</div>	
-									</div>
+								${winnerDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
 
-									<div class="team-card__bottom__row">					
-										<div class="team-card__bottom__row__left">Runner Up</div>
-										<div class="team-card__bottom__row__right">
-											${runnerUpDates.map(function (key) {
-												return "<div class=year>" + key + "</div>"        
-											}).join("")}
-										</div>	
-									</div>
+							</div>
+						</div>
 
-									<div class="team-card__bottom__row">					
-										<div class="team-card__bottom__row__left">Semi Final</div>
-										<div class="team-card__bottom__row__right">
-											${semiFinalDates.map(function (key) {
-												return "<div class=year>" + key + "</div>"        
-											}).join("")}
-										</div>	
-									</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Runner Up</div>
+							<div class="team-card__bottom__row__right">
+								${runnerUpDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-									<div class="team-card__bottom__row">					
-										<div class="team-card__bottom__row__left">Quarter Final</div>
-										<div class="team-card__bottom__row__right">
-											<div class="year">2007/08</div>
-										</div>	
-									</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Semi Final</div>
+							<div class="team-card__bottom__row__right">
+								${semiFinalDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-									<div class="team-card__bottom__row">					
-										<div class="team-card__bottom__row__left">Last 16</div>
-										<div class="team-card__bottom__row__right">
-											<div class="year">2007/08</div>
-										</div>	
-									</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Quarter Final</div>
+							<div class="team-card__bottom__row__right">
+								${quarterFinalDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-									<div class="team-card__bottom__row">					
-										<div class="team-card__bottom__row__left">Groups</div>
-										<div class="team-card__bottom__row__right">
-											<div class="year">2007/08</div>
-										</div>	
-									</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Last 16</div>
+							<div class="team-card__bottom__row__right">
+								${last16Dates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-								</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Groups</div>
+							<div class="team-card__bottom__row__right">
+								${groupsDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-							</div>`
+					</div>
+
+				</div>`
 
 				document.getElementById("dataTest").innerHTML += markup;
 
