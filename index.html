@@ -22,6 +22,24 @@
 		<script>
 			//maybe create scraper for the data
 
+			
+//		D	ESP: Barcelona, Atlético Madrid, Real Madrid, Valencia
+//		D	ENG: Manchester City, Liverpool (holders), Chelsea, Tottenham Hotspur
+//		D	ITA: Juventus, Napoli, Atalanta, Internazionale Milano
+//			GER: Bayern München, Borussia Dortmund, RB Leipzig, Bayer Leverkusen
+//			FRA: Paris Saint-Germain, LOSC Lille, Lyon**
+//			RUS: Zenit, Lokomotiv Moskva
+//			POR: Benfica
+//			UKR: Shakhtar Donetsk
+//			BEL: Genk, Club Brugge***
+//			TUR: Galatasaray
+//			AUT: Salzburg*
+//			CZE: Slavia Praha***
+//			NED: Ajax ***
+//			GRE: Olympiacos***
+//			CRO: GNK Dinamo***
+//			SRB: Crvena zvezda***
+			
 			var teamData = {
 				"teams":[
 					{
@@ -59,7 +77,140 @@
 							{	"last16": [{date: "2009/10"}, {date: "2008/09"}, {date: "2007/08"}, {date: "2006/07"}, {date: "2005/06"}]} ,
 							{	"groups": []}
 						]
-					},					
+					},	
+										{
+						"name":"Liverpool",
+						"image":"liverpool.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": [{date: "2017/18"}, {date: "2006/07"}]} ,
+							{	"semiFinal": [ {date: "2007/08"}]} ,
+							{	"quarterFinal": [{date: "2008/09"}]} ,
+							{	"last16": [{date: "2005/06"}, {date: "2008/09"}]} ,
+							{	"groups": [{date: "2014/15"}, {date: "2009/10"}]}
+						]
+					},
+															{
+						"name":"Manchester City",
+						"image":"manchestercity.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": [ {date: "2015/16"}]} ,
+							{	"quarterFinal": [{date: "2017/18"}]} ,
+							{	"last16": [{date: "2016/17"}, {date: "2014/15"}, {date: "2013/14"}]} ,
+							{	"groups": [{date: "2012/13"}, {date: "2011/12"}]}
+						]
+					},
+															{
+						"name":"Tottenham Hotspur",
+						"image":"tottenham.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2010/11"}]} ,
+							{	"last16": [{date: "2017/18"}]} ,
+							{	"groups": [{date: "2016/17"}]}
+						]
+					},
+															{
+						"name":"Atlético Madrid",
+						"image":"atléticomadrid.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": [{date: "2015/16"}, {date: "2013/14"}]} ,
+							{	"semiFinal": [ {date: "2016/17"}]} ,
+							{	"quarterFinal": [{date: "2014/15"}]} ,
+							{	"last16": [{date: "2008/09"}]} ,
+							{	"groups": [{date: "2017/18"}, {date: "2009/10"}]}
+						]
+					},
+															{
+						"name":"Valencia",
+						"image":"valencia.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2006/07"}]} ,
+							{	"last16": [{date: "2012/13"}, {date: "2010/11"}]} ,
+							{	"groups": [{date: "2018/19"}, {date: "2015/16"}, {date: "2011/12"}]}
+						]
+					},
+															{
+						"name":"Juventus",
+						"image":"juventus.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": [{date: "2016/17"}, {date: "2014/15"}]} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2017/18"}, {date: "2012/13"}, {date: "2005/06"}]} ,
+							{	"last16": [{date: "2015/16"}, {date: "2008/09"}]} ,
+							{	"groups": [{date: "2014/15"}, {date: "2009/10"}]}
+						]
+					},
+															{
+						"name":"Napoli",
+						"image":"napoli.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": []} ,
+							{	"last16": [{date: "2016/17"}, {date: "2011/12"}]} ,
+							{	"groups": [{date: "2018/19"}, {date: "2017/18"}, {date: "2013/14"}]}
+						]
+					},
+															{
+						"name":"Atalanta",
+						"image":"atalanta.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": [ ]} ,
+							{	"quarterFinal": []} ,
+							{	"last16": []} ,
+							{	"groups": []}
+						]
+					},
+															{
+						"name":"Inter Milan",
+						"image":"intermilan.png",
+						"results":[
+							{   "winner": [{date: "2009/10"}]} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2010/11"}, {date: "2005/06"}]} ,
+							{	"last16": [{date: "2011/12"}, {date: "2008/09"}, {date: "2007/08"}, {date: "2006/07"}]} ,
+							{	"groups": [{date: "2018/19"}]}
+						]
+					},
+															{
+						"name":"Bayern München",
+						"image":"bayern.png",
+						"results":[
+							{   "winner": [{date: "2012/13"}]} ,
+							{	"runnerUp": [{date: "2011/12"}, {date: "2009/10"}]} ,
+							{	"semiFinal": [ {date: "2017/18"}, {date: "2015/16"}, {date: "2014/15"}, {date: "2013/14"}]} ,
+							{	"quarterFinal": [{date: "2016/17"}, {date: "2008/09"}, {date: "2006/07"}]} ,
+							{	"last16": [{date: "2010/11"}, {date: "2005/06"}]} ,
+							{	"groups": []}
+						]
+					},
+															{
+						"name":"Borussia Dortmund",
+						"image":"borussiadortmund.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": [{date: "2012/13"}]} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2016/17"}, {date: "2013/14"}]} ,
+							{	"last16": [{date: "2014/15"}]} ,
+							{	"groups": [{date: "2017/18"}, {date: "2011/12"}]}
+						]
+					},
+	
 				]
 			}		
 
