@@ -11,8 +11,8 @@
 
 		<p id="dataTest"></p>
 
-<!--		 colour code could be done by getting all class that are "year" and checking the inner html and applying color based on that-->
-		
+		<!--		 colour code could be done by getting all class that are "year" and checking the inner html and applying color based on that-->
+
 		<!--		23:28 -->
 		<div class="team-card">
 			<div class="team-card__top">
@@ -37,27 +37,37 @@
 
 				<div class="team-card__bottom__row">					
 					<div class="team-card__bottom__row__left">Runner Up</div>
-					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+					<div class="team-card__bottom__row__right">
+						<div class="year">2007/08</div>
+					</div>	
 				</div>
 
 				<div class="team-card__bottom__row">					
-					<div class="team-card__bottom__row__left">Runner Up</div>
-					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+					<div class="team-card__bottom__row__left">Semi Final</div>
+					<div class="team-card__bottom__row__right">
+						<div class="year">2007/08</div>
+					</div>	
 				</div>
 
 				<div class="team-card__bottom__row">					
-					<div class="team-card__bottom__row__left">Runner Up</div>
-					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+					<div class="team-card__bottom__row__left">Quarter Final</div>
+					<div class="team-card__bottom__row__right">
+						<div class="year">2007/08</div>
+					</div>	
 				</div>
 
 				<div class="team-card__bottom__row">					
-					<div class="team-card__bottom__row__left">Runner Up</div>
-					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+					<div class="team-card__bottom__row__left">Last 16</div>
+					<div class="team-card__bottom__row__right">
+						<div class="year">2007/08</div>
+					</div>	
 				</div>
 
 				<div class="team-card__bottom__row">					
-					<div class="team-card__bottom__row__left">Runner Up</div>
-					<div class="team-card__bottom__row__right"><div class="year">2007/08</div></div>	
+					<div class="team-card__bottom__row__left">Groups</div>
+					<div class="team-card__bottom__row__right">
+						<div class="year">2007/08</div>
+					</div>	
 				</div>
 
 			</div>
@@ -69,62 +79,167 @@
 		<script>
 
 			var teamData = {
-   "teams":[
-      {
-         "name":"Manchester United",
-         "results":[
-            {
-               "winner":"2000/01",
-               "runnerUp":"2000/02",
-               "semiFinal":"2000/01",
-               "quarterFinal":"2000/11111",
-               "last16":"2000/01",
-               "groups":"2000/01"
-            }
-         ]
-      },
-      {
-         "name":"Arsenal",
-         "results":[
-            {
-               "winner":"2000/01",
-               "runnerUp":"2000/02",
-               "semiFinal":"2000/01",
-               "quarterFinal":[
-                  "2000/222222",
-                  "3003"
-               ],
-               "last16":"2000/01",
-               "groups":"2000/01"
-            }
-         ]
-      },
-      {
-         "name":"Chelsea",
-         "results":[
-            {
-               "winner":"2000/01",
-               "runnerUp":"2000/02",
-               "semiFinal":"2000/01",
-               "quarterFinal":"2000/333333",
-               "last16":"2000/01",
-               "groups":"2000/01"
-            }
-         ]
-      }
-   ]
-}				
+				"teams":[
+					{
+						"name":"Manchester United",
+						"image":"manchesteru.png",
+						"results":[
+							{   "winner": ["2000/01", "2010/02"]} ,
+							{	"runnerUp": ["2000/011", "2010/02"]} ,
+							{	"semiFinal": ["2000/01"]} ,
+							{	"quarterFinal": ["2000/01"]} ,
+							{	"last16": ["2000/01", "2010/02"]} ,
+							{	"groups": ["2000/01", "2010/02"]}
+						]
+					},
+					{
+						"name":"Arsenal",
+						"results":[
+							{   "winner": ["2000/01", "2010/033"]} ,
+							{	"runnerUp": ["2000/05", "2010/02"]} ,
+							{	"semiFinal": ["2000/01"]} ,
+							{	"quarterFinal": ["2000/01"]} ,
+							{	"last16": ["2000/01", "2010/02"]} ,
+							{	"groups": ["2000/01", "2010/02"]}
+						]
+					},
+					{
+						"name":"Chelsea",
+						"results":[
+							{   "winner": ["2000/01", "2010/02"]} ,
+							{	"runnerUp": ["2000/01", "2010/02"]} ,
+							{	"semiFinal": ["2000/01"]} ,
+							{	"quarterFinal": ["2000/01"]} ,
+							{	"last16": ["2000/01", "2010/02"]} ,
+							{	"groups": ["2000/01", "2010/02"]}
+						]
+					}
+				]
+			}				
+
+
+			teamData.teams.forEach(team => {
+				team.name;
+				console.log(team.name);		
+				
+				var winnerDates = [];
+				var runnerUpDates = [];
+				var semiFinalDates = [];
+				
+				
+				team.results.forEach(stage => {
+//					console.log("stage", stage);
+
+					//					stage.forEach(test => {
+					//						console.log(test);
+					//					})
+					//					
+
+
+					// Create the dates
+					if(stage.winner){
+						winnerDates = stage.winner;
+					}											
+
+					if(stage.runnerUp){
+						runnerUpDates = stage.runnerUp
+					}
+
+					if(stage.semiFinal){
+						semiFinalDates = stage.semiFinal
+					}
+
+					if(stage.quarterFinal){
+						stage.quarterFinal
+					}
+
+					if(stage.last16){
+						stage.last16
+					}
+
+					if(stage.groups){
+						stage.groups
+					}
+
+				})
+				
+				
+
+//				const markup = `<div class="">${team.name}</div>`
+				const markup = `<div class="team-card">
+									<div class="team-card__top">
+										<div class="team-card__top__left">
+											<img class="team-logo" src="/images/${team.image}">
+										</div>
+										<div class="team-card__top__right">
+											<p class="team-name">${team.name}</p>
+										</div>
+									</div>
+
+								<div class="team-card__bottom">
+									<div class="team-card__bottom__row">					
+										<div class="team-card__bottom__row__left">Winner</div>
+										<div class="team-card__bottom__row__right">
+
+											 ${winnerDates.map(function (key) {
+												return "<div class='year color2'>" + key + "</div>"        
+											}).join("")}
+											
+										</div>	
+									</div>
+
+									<div class="team-card__bottom__row">					
+										<div class="team-card__bottom__row__left">Runner Up</div>
+										<div class="team-card__bottom__row__right">
+											${runnerUpDates.map(function (key) {
+												return "<div class=year>" + key + "</div>"        
+											}).join("")}
+										</div>	
+									</div>
+
+									<div class="team-card__bottom__row">					
+										<div class="team-card__bottom__row__left">Semi Final</div>
+										<div class="team-card__bottom__row__right">
+											${semiFinalDates.map(function (key) {
+												return "<div class=year>" + key + "</div>"        
+											}).join("")}
+										</div>	
+									</div>
+
+									<div class="team-card__bottom__row">					
+										<div class="team-card__bottom__row__left">Quarter Final</div>
+										<div class="team-card__bottom__row__right">
+											<div class="year">2007/08</div>
+										</div>	
+									</div>
+
+									<div class="team-card__bottom__row">					
+										<div class="team-card__bottom__row__left">Last 16</div>
+										<div class="team-card__bottom__row__right">
+											<div class="year">2007/08</div>
+										</div>	
+									</div>
+
+									<div class="team-card__bottom__row">					
+										<div class="team-card__bottom__row__left">Groups</div>
+										<div class="team-card__bottom__row__right">
+											<div class="year">2007/08</div>
+										</div>	
+									</div>
+
+								</div>
+
+							</div>`
+
+				document.getElementById("dataTest").innerHTML += markup;
+
+
+				console.log(team.results);
 
 
 
+			})		
 
-			document.getElementById("dataTest").innerHTML =
-			teamData.teams[1].name + teamData.teams[1].results[0].quarterFinal;
-
-
-			const team = teamData.teams.find(element => element.name === "Arsenal");
-			console.log(team);
-			console.log(team.results[0].quarterFinal[1])
 
 		</script>
 

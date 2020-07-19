@@ -71,3 +71,13 @@ body {
 .team-card__bottom__row__right::-webkit-scrollbar {
     display: none;
 }
+
+.color1 {
+	color: aqua;
+	border-color: aliceblue;
+}
+
+.color2 {
+	color: red;
+	border-color: green;
+}
