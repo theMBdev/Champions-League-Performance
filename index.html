@@ -10,11 +10,11 @@
 	<body>
 
 		<div class="title">
-				<h2>Champions League</h2>
-		<p>15 year history of 2019/20 qualified teams</p>
+			<h2>Champions League</h2>
+			<p>14 year history of 2018/19 qualified teams</p>
 		</div>
 
-		
+
 		<div class="grid-container">
 			<p id="dataTest"></p>
 		</div>
@@ -22,24 +22,24 @@
 		<script>
 			//maybe create scraper for the data
 
-			
-//		D	ESP: Barcelona, Atlético Madrid, Real Madrid, Valencia
-//		D	ENG: Manchester City, Liverpool (holders), Chelsea, Tottenham Hotspur
-//		D	ITA: Juventus, Napoli, Atalanta, Internazionale Milano
-//		D	GER: Bayern München, Borussia Dortmund, RB Leipzig, Bayer Leverkusen
-//		D	FRA: Paris Saint-Germain, LOSC Lille, Lyon**
-//			RUS: Zenit, Lokomotiv Moskva
-//			POR: Benfica
-//			UKR: Shakhtar Donetsk
-//			BEL: Genk, Club Brugge***
-//			TUR: Galatasaray
-//			AUT: Salzburg*
-//			CZE: Slavia Praha***
-//			NED: Ajax ***
-//			GRE: Olympiacos***
-//			CRO: GNK Dinamo***
-//			SRB: Crvena zvezda***
-			
+
+			//		D	ESP: Barcelona, Atlético Madrid, Real Madrid, Valencia
+			//		D	ENG: Manchester City, Liverpool (holders), Chelsea, Tottenham Hotspur
+			//		D	ITA: Juventus, Napoli, Atalanta, Internazionale Milano
+			//		D	GER: Bayern München, Borussia Dortmund, RB Leipzig, Bayer Leverkusen
+			//		D	FRA: Paris Saint-Germain, LOSC Lille, Lyon**
+			//			RUS: Zenit, Lokomotiv Moskva
+			//			POR: Benfica
+			//			UKR: Shakhtar Donetsk
+			//			BEL: Genk, Club Brugge***
+			//			TUR: Galatasaray
+			//			AUT: Salzburg*
+			//			CZE: Slavia Praha***
+			//			NED: Ajax ***
+			//			GRE: Olympiacos***
+			//			CRO: GNK Dinamo***
+			//			SRB: Crvena zvezda***
+
 			var teamData = {
 				"teams":[
 					{
@@ -74,11 +74,11 @@
 							{	"runnerUp": []} ,
 							{	"semiFinal": [ {date: "2014/15"}, {date: "2012/13"}, {date: "2011/12"}, {date: "2010/11"}]} ,
 							{	"quarterFinal": [{date: "2018/19"}, {date: "2013/14"}, {date: "2009/10"}]} ,
-							{	"last16": [{date: "2009/10"}, {date: "2008/09"}, {date: "2007/08"}, {date: "2006/07"}, {date: "2005/06"}]} ,
+							{	"last16": [{date: "2008/09"}, {date: "2007/08"}, {date: "2006/07"}, {date: "2005/06"}]} ,
 							{	"groups": []}
 						]
 					},	
-										{
+					{
 						"name":"Liverpool",
 						"image":"liverpool.png",
 						"results":[
@@ -86,11 +86,11 @@
 							{	"runnerUp": [{date: "2017/18"}, {date: "2006/07"}]} ,
 							{	"semiFinal": [ {date: "2007/08"}]} ,
 							{	"quarterFinal": [{date: "2008/09"}]} ,
-							{	"last16": [{date: "2005/06"}, {date: "2008/09"}]} ,
+							{	"last16": [{date: "2005/06"}]} ,
 							{	"groups": [{date: "2014/15"}, {date: "2009/10"}]}
 						]
 					},
-															{
+					{
 						"name":"Manchester City",
 						"image":"manchestercity.png",
 						"results":[
@@ -102,19 +102,19 @@
 							{	"groups": [{date: "2012/13"}, {date: "2011/12"}]}
 						]
 					},
-															{
+					{
 						"name":"Tottenham Hotspur",
 						"image":"tottenham.png",
 						"results":[
-							{   "winner": [{date: "2018/19"}]} ,
-							{	"runnerUp": []} ,
+							{   "winner": []} ,
+							{	"runnerUp": [{date: "2018/19"}]} ,
 							{	"semiFinal": []} ,
 							{	"quarterFinal": [{date: "2010/11"}]} ,
 							{	"last16": [{date: "2017/18"}]} ,
 							{	"groups": [{date: "2016/17"}]}
 						]
 					},
-															{
+					{
 						"name":"Atlético Madrid",
 						"image":"atléticomadrid.png",
 						"results":[
@@ -126,7 +126,7 @@
 							{	"groups": [ {date: "2017/18"}, {date: "2009/10"}]}
 						]
 					},
-															{
+					{
 						"name":"Valencia",
 						"image":"valencia.png",
 						"results":[
@@ -138,7 +138,7 @@
 							{	"groups": [{date: "2018/19"}, {date: "2015/16"}, {date: "2011/12"}]}
 						]
 					},
-															{
+					{
 						"name":"Juventus",
 						"image":"juventus.png",
 						"results":[
@@ -150,7 +150,7 @@
 							{	"groups": [{date: "2014/15"}, {date: "2009/10"}]}
 						]
 					},
-															{
+					{
 						"name":"Napoli",
 						"image":"napoli.png",
 						"results":[
@@ -162,19 +162,8 @@
 							{	"groups": [{date: "2018/19"}, {date: "2017/18"}, {date: "2013/14"}]}
 						]
 					},
-															{
-						"name":"Atalanta",
-						"image":"atalanta.png",
-						"results":[
-							{   "winner": []} ,
-							{	"runnerUp": []} ,
-							{	"semiFinal": [ ]} ,
-							{	"quarterFinal": []} ,
-							{	"last16": []} ,
-							{	"groups": []}
-						]
-					},
-															{
+
+					{
 						"name":"Inter Milan",
 						"image":"intermilan.png",
 						"results":[
@@ -186,7 +175,7 @@
 							{	"groups": [{date: "2018/19"}]}
 						]
 					},
-															{
+					{
 						"name":"Bayern München",
 						"image":"bayern.png",
 						"results":[
@@ -198,7 +187,7 @@
 							{	"groups": []}
 						]
 					},
-															{
+					{
 						"name":"Borussia Dortmund",
 						"image":"borussiadortmund.png",
 						"results":[
@@ -210,19 +199,7 @@
 							{	"groups": [{date: "2017/18"}, {date: "2011/12"}]}
 						]
 					},
-																				{
-						"name":"RB Leipzig",
-						"image":"rbleipzig.png",
-						"results":[
-							{   "winner": []} ,
-							{	"runnerUp": []} ,
-							{	"semiFinal": []} ,
-							{	"quarterFinal": []} ,
-							{	"last16": []} ,
-							{	"groups": [{date: "2017/18"}]}
-						]
-					},
-																				{
+					{
 						"name":"Paris Saint-Germain",
 						"image":"psg.png",
 						"results":[
@@ -234,20 +211,8 @@
 							{	"groups": []}
 						]
 					},
-																				{
-						"name":"Lille",
-						"image":"lille.png",
-						"results":[
-							{   "winner": []} ,
-							{	"runnerUp": []} ,
-							{	"semiFinal": []} ,
-							{	"quarterFinal": []} ,
-							{	"last16": [{date: "2006/07"}]} ,
-							{	"groups": [{date: "2012/13"}, {date: "2011/12"}, {date: "2005/06"}]}
-						]
-					},
-					
-														{
+
+					{
 						"name":"Lyon",
 						"image":"lyon.png",
 						"results":[
@@ -259,8 +224,217 @@
 							{	"groups": [{date: "2016/17"}, {date: "2015/16"}]}
 						]
 					},
-					
-	
+					{
+						"name":"Lokomotiv Moskva",
+						"image":"lokomotivmoskva.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": []} ,
+							{	"last16": []} ,
+							{	"groups": [{date: "2018/19"}]}
+						]
+					},
+					{
+						"name":"Benfica",
+						"image":"benfica.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2015/16"}, {date: "2011/12"}, {date: "2005/06"}]} ,
+							{	"last16": [{date: "2015/16"}, {date: "2013/14"}, {date: "2012/13"}]} ,
+							{	"groups": [{date: "2018/19"}, {date: "2017/18"}, {date: "2014/15"} , {date: "2010/11"}, {date: "2007/08"}, {date: "2006/07"}]}
+						]
+					},
+					{
+						"name":"Shakhtar Donetsk",
+						"image":"shakhtardonetsk.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2010/11"}]} ,
+							{	"last16": [{date: "2017/18"}, {date: "2014/15"}, {date: "2012/13"}]} ,
+							{	"groups": [{date: "2018/19"}, {date: "2013/14"}, {date: "2011/12"} , {date: "2008/09"}, {date: "2007/08"}, {date: "2006/07"}]}
+						]
+					},
+
+					{
+						"name":"Club Brugge",
+						"image":"clubbrugge.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": []} ,
+							{	"last16": []} ,
+							{	"groups": [{date: "2018/19"}, {date: "2016/17"}, {date: "2005/06"}]}
+						]
+					},
+					{
+						"name":"Galatasaray",
+						"image":"galatasaray.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2012/13"}]} ,
+							{	"last16": [{date: "2013/14"}]} ,
+							{	"groups": [{date: "2018/19"}, {date: "2015/16"}, {date: "2014/15"}, {date: "2006/07"}]}
+						]
+					},
+
+					{
+						"name":"Crvena zvezda",
+						"image":"Crvenazvezda.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": []} ,
+							{	"last16": []} ,
+							{	"groups": [{date: "2018/19"}]}
+						]
+					},				
+
+					{
+						"name":"Ajax",
+						"image":"ajax.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": [{date: "2018/19"}]} ,
+							{	"quarterFinal": []} ,
+							{	"last16": [{date: "2005/06"}]} ,
+							{	"groups": [ {date: "2014/15"}, {date: "2013/14"}, {date: "2012/13"}, {date: "2011/12"}, {date: "2010/11"}]}
+						]
+					},
+					{
+						"name":"Monaco",
+						"image":"monaco.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": [{date: "2016/17"}]} ,
+							{	"quarterFinal": [{date: "2014/15"}]} ,
+							{	"last16": []} ,
+							{	"groups": [{date: "2018/19"}, {date: "2017/18"}]}
+						]
+					},
+					{
+						"name":"PSV Eindhoven",
+						"image":"psveindhoven.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2006/07"}]} ,
+							{	"last16": [{date: "2015/16"}]} ,
+							{	"groups": [{date: "2018/19"}, {date: "2016/17"}, {date: "2008/09"}, {date: "2007/08"}]}
+						]
+					},
+					{
+						"name":"AEK Athens",
+						"image":"aekathens.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": []} ,
+							{	"last16": []} ,
+							{	"groups": [{date: "2018/19"}, {date: "2006/07"}]}
+						]
+					},
+					{
+						"name":"1899 Hoffenheim",
+						"image":"hoffenheim.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": []} ,
+							{	"last16": []} ,
+							{	"groups": [{date: "2018/19"}]}
+						]
+					},
+					{
+						"name":"Roma",
+						"image":"roma.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": [{date: "2017/18"}, {date: "2006/07"}]} ,
+							{	"quarterFinal": [{date: "2007/08"}]} ,
+							{	"last16": [{date: "2018/19"}, {date: "2015/16"}, {date: "2010/11"}, {date: "2008/09"}]} ,
+							{	"groups": [{date: "2014/15"}]}
+						]
+					},
+					{
+						"name":"Porto",
+						"image":"porto.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2018/19"}, {date: "2014/15"}, {date: "2008/09"},]} ,
+							{	"last16": [{date: "2017/18"}, {date: "2016/17"}, {date: "2012/13"}, {date: "2009/10"}, {date: "2007/08"}, {date: "2006/07"}]} ,
+							{	"groups": [{date: "2015/16"}, {date: "2013/14"}, {date: "2011/12"}, {date: "2005/06"}]}
+						]
+					},
+					{
+						"name":"Schalke 04",
+						"image":"Schalke.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": [{date: "2010/11"}]} ,
+							{	"quarterFinal": [{date: "2007/08"}]} ,
+							{	"last16": [{date: "2018/19"}, {date: "2014/15"}, {date: "2013/14"}, {date: "2012/13"}]} ,
+							{	"groups": [{date: "2005/06"}]}
+						]
+					},
+					{
+						"name":"Viktoria Plzeň",
+						"image":"viktoriaplzen.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": []} ,
+							{	"last16": []} ,
+							{	"groups": [{date: "2018/19"}, {date: "2013/14"}, {date: "2011/12"}]}
+						]
+					},
+					{
+						"name":"Young Boys",
+						"image":"YoungBoys.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": []} ,
+							{	"last16": []} ,
+							{	"groups": [{date: "2018/19"}]}
+						]
+					},
+					{
+						"name":"CSKA Moskva",
+						"image":"moskva.png",
+						"results":[
+							{   "winner": []} ,
+							{	"runnerUp": []} ,
+							{	"semiFinal": []} ,
+							{	"quarterFinal": [{date: "2009/10"}]} ,
+							{	"last16": [{date: "2011/12"}]} ,
+							{	"groups": [{date: "2018/19"}, {date: "2017/18"}, {date: "2016/17"}, {date: "2015/16"}, {date: "2014/15"}, {date: "2013/14"}, {date: "2007/08"}, {date: "2006/07"}]}
+						]
+					},
+
+
+
+
 				]
 			}		
 
@@ -374,79 +548,79 @@
 				})
 
 				const markup = `<div class="team-card">
-					<div class="team-card__top">
-						<div class="team-card__top__left">
-							<img class="team-logo" src="/images/${team.image}">
-						</div>
-						<div class="team-card__top__right">
-							<h3 class="team-name">${team.name}</h3>
-						</div>
-					</div>
+<div class="team-card__top">
+<div class="team-card__top__left">
+<img class="team-logo" src="/images/${team.image}">
+			</div>
+<div class="team-card__top__right">
+<h3 class="team-name">${team.name}</h3>
+			</div>
+			</div>
 
-					<div class="team-card__bottom">
-						<div class="team-card__bottom__row">
-							<div class="team-card__bottom__row__left">Winner</div>
-							<div class="team-card__bottom__row__right">
+<div class="team-card__bottom">
+<div class="team-card__bottom__row">
+<div class="team-card__bottom__row__left">Winner</div>
+<div class="team-card__bottom__row__right">
 
-								${winnerDates.map(function (key) {
-								return "<div class='year "+key.color+"'>" + key.date + "</div>"
-								}).join("")}
+${winnerDates.map(function (key) {
+	return "<div class='year "+key.color+"'>" + key.date + "</div>"
+}).join("")}
 
-							</div>
-						</div>
+			</div>
+			</div>
 
-						<div class="team-card__bottom__row">
-							<div class="team-card__bottom__row__left">Runner Up</div>
-							<div class="team-card__bottom__row__right">
-								${runnerUpDates.map(function (key) {
-								return "<div class='year "+key.color+"'>" + key.date + "</div>"
-								}).join("")}
-							</div>
-						</div>
+<div class="team-card__bottom__row">
+<div class="team-card__bottom__row__left">Runner Up</div>
+<div class="team-card__bottom__row__right">
+${runnerUpDates.map(function (key) {
+	return "<div class='year "+key.color+"'>" + key.date + "</div>"
+}).join("")}
+			</div>
+			</div>
 
-						<div class="team-card__bottom__row">
-							<div class="team-card__bottom__row__left">Semi Final</div>
-							<div class="team-card__bottom__row__right">
-								${semiFinalDates.map(function (key) {
-								return "<div class='year "+key.color+"'>" + key.date + "</div>"
-								}).join("")}
-							</div>
-						</div>
+<div class="team-card__bottom__row">
+<div class="team-card__bottom__row__left">Semi Final</div>
+<div class="team-card__bottom__row__right">
+${semiFinalDates.map(function (key) {
+	return "<div class='year "+key.color+"'>" + key.date + "</div>"
+}).join("")}
+			</div>
+			</div>
 
-						<div class="team-card__bottom__row">
-							<div class="team-card__bottom__row__left">Quarter Final</div>
-							<div class="team-card__bottom__row__right">
-								${quarterFinalDates.map(function (key) {
-								return "<div class='year "+key.color+"'>" + key.date + "</div>"
-								}).join("")}
-							</div>
-						</div>
+<div class="team-card__bottom__row">
+<div class="team-card__bottom__row__left">Quarter Final</div>
+<div class="team-card__bottom__row__right">
+${quarterFinalDates.map(function (key) {
+	return "<div class='year "+key.color+"'>" + key.date + "</div>"
+}).join("")}
+			</div>
+			</div>
 
-						<div class="team-card__bottom__row">
-							<div class="team-card__bottom__row__left">Last 16</div>
-							<div class="team-card__bottom__row__right">
-								${last16Dates.map(function (key) {
-								return "<div class='year "+key.color+"'>" + key.date + "</div>"
-								}).join("")}
-							</div>
-						</div>
+<div class="team-card__bottom__row">
+<div class="team-card__bottom__row__left">Last 16</div>
+<div class="team-card__bottom__row__right">
+${last16Dates.map(function (key) {
+	return "<div class='year "+key.color+"'>" + key.date + "</div>"
+}).join("")}
+			</div>
+			</div>
 
-						<div class="team-card__bottom__row">
-							<div class="team-card__bottom__row__left">Groups</div>
-							<div class="team-card__bottom__row__right">
-								${groupsDates.map(function (key) {
-								return "<div class='year "+key.color+"'>" + key.date + "</div>"
-								}).join("")}
-							</div>
-						</div>
+<div class="team-card__bottom__row">
+<div class="team-card__bottom__row__left">Groups</div>
+<div class="team-card__bottom__row__right">
+${groupsDates.map(function (key) {
+	return "<div class='year "+key.color+"'>" + key.date + "</div>"
+}).join("")}
+			</div>
+			</div>
 
-					</div>
+			</div>
 
-				</div>`
+			</div>`
 
 				document.getElementById("dataTest").innerHTML += markup;
 
-				})		
+			})		
 
 
 		</script>
