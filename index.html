@@ -16,29 +16,10 @@
 
 
 		<div class="grid-container">
-			<p id="dataTest"></p>
+			<p id="data"></p>
 		</div>
 
-		<script>
-			//maybe create scraper for the data
-
-
-			//		D	ESP: Barcelona, Atlético Madrid, Real Madrid, Valencia
-			//		D	ENG: Manchester City, Liverpool (holders), Chelsea, Tottenham Hotspur
-			//		D	ITA: Juventus, Napoli, Atalanta, Internazionale Milano
-			//		D	GER: Bayern München, Borussia Dortmund, RB Leipzig, Bayer Leverkusen
-			//		D	FRA: Paris Saint-Germain, LOSC Lille, Lyon**
-			//			RUS: Zenit, Lokomotiv Moskva
-			//			POR: Benfica
-			//			UKR: Shakhtar Donetsk
-			//			BEL: Genk, Club Brugge***
-			//			TUR: Galatasaray
-			//			AUT: Salzburg*
-			//			CZE: Slavia Praha***
-			//			NED: Ajax ***
-			//			GRE: Olympiacos***
-			//			CRO: GNK Dinamo***
-			//			SRB: Crvena zvezda***
+		<script>		
 
 			var teamData = {
 				"teams":[
@@ -288,7 +269,7 @@
 
 					{
 						"name":"Crvena zvezda",
-						"image":"Crvenazvezda.png",
+						"image":"crvenazvezda.png",
 						"results":[
 							{   "winner": []} ,
 							{	"runnerUp": []} ,
@@ -547,81 +528,80 @@
 
 				})
 
-				const markup = `<div class="team-card">
-<div class="team-card__top">
-<div class="team-card__top__left">
-<img class="team-logo" src="./images/${team.image}">
-			</div>
-<div class="team-card__top__right">
-<h3 class="team-name">${team.name}</h3>
-			</div>
-			</div>
+				const cardMarkup = `<div class="team-card">
+					<div class="team-card__top">
+						<div class="team-card__top__left">
+							<img class="team-logo" src="./images/${team.image}">
+						</div>
+						<div class="team-card__top__right">
+							<h3 class="team-name">${team.name}</h3>
+						</div>
+					</div>
 
-<div class="team-card__bottom">
-<div class="team-card__bottom__row">
-<div class="team-card__bottom__row__left">Winner</div>
-<div class="team-card__bottom__row__right">
+					<div class="team-card__bottom">
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Winner</div>
+							<div class="team-card__bottom__row__right">
 
-${winnerDates.map(function (key) {
-	return "<div class='year "+key.color+"'>" + key.date + "</div>"
-}).join("")}
+								${winnerDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
 
-			</div>
-			</div>
+							</div>
+						</div>
 
-<div class="team-card__bottom__row">
-<div class="team-card__bottom__row__left">Runner Up</div>
-<div class="team-card__bottom__row__right">
-${runnerUpDates.map(function (key) {
-	return "<div class='year "+key.color+"'>" + key.date + "</div>"
-}).join("")}
-			</div>
-			</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Runner Up</div>
+							<div class="team-card__bottom__row__right">
+								${runnerUpDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-<div class="team-card__bottom__row">
-<div class="team-card__bottom__row__left">Semi Final</div>
-<div class="team-card__bottom__row__right">
-${semiFinalDates.map(function (key) {
-	return "<div class='year "+key.color+"'>" + key.date + "</div>"
-}).join("")}
-			</div>
-			</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Semi Final</div>
+							<div class="team-card__bottom__row__right">
+								${semiFinalDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-<div class="team-card__bottom__row">
-<div class="team-card__bottom__row__left">Quarter Final</div>
-<div class="team-card__bottom__row__right">
-${quarterFinalDates.map(function (key) {
-	return "<div class='year "+key.color+"'>" + key.date + "</div>"
-}).join("")}
-			</div>
-			</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Quarter Final</div>
+							<div class="team-card__bottom__row__right">
+								${quarterFinalDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-<div class="team-card__bottom__row">
-<div class="team-card__bottom__row__left">Last 16</div>
-<div class="team-card__bottom__row__right">
-${last16Dates.map(function (key) {
-	return "<div class='year "+key.color+"'>" + key.date + "</div>"
-}).join("")}
-			</div>
-			</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Last 16</div>
+							<div class="team-card__bottom__row__right">
+								${last16Dates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-<div class="team-card__bottom__row">
-<div class="team-card__bottom__row__left">Groups</div>
-<div class="team-card__bottom__row__right">
-${groupsDates.map(function (key) {
-	return "<div class='year "+key.color+"'>" + key.date + "</div>"
-}).join("")}
-			</div>
-			</div>
+						<div class="team-card__bottom__row">
+							<div class="team-card__bottom__row__left">Groups</div>
+							<div class="team-card__bottom__row__right">
+								${groupsDates.map(function (key) {
+								return "<div class='year "+key.color+"'>" + key.date + "</div>"
+								}).join("")}
+							</div>
+						</div>
 
-			</div>
+					</div>
 
-			</div>`
+				</div>`
 
-				document.getElementById("dataTest").innerHTML += markup;
+				document.getElementById("data").innerHTML += cardMarkup;
 
-			})		
-
+				})
 
 		</script>
 

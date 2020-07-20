@@ -22,7 +22,7 @@ body {
 	justify-content: center;
 }
 
-#dataTest {
+#data {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	grid-gap: 10px;
@@ -178,15 +178,15 @@ body {
 	border-color: #65FF18;
 }
 
-@media screen and (max-width: 1500px) {
-	#dataTest {
+@media screen and (max-width: 1540px) {
+	#data {
 		display: grid;
 		grid-template-columns: auto auto;
 		grid-gap: 10px;
 	}
 
-	@media screen and (max-width: 1000px) {
-		#dataTest {
+	@media screen and (max-width: 1030px) {
+		#data {
 			display: grid;
 			grid-template-columns: auto;
 			grid-gap: 10px;
@@ -195,7 +195,7 @@ body {
 	}
 
 	@media screen and (max-width: 515px) {
-		#dataTest {
+		#data {
 			display: grid;
 			grid-template-columns: auto;
 			grid-gap: 10px;
@@ -211,7 +211,7 @@ body {
 	}
 	
 		@media screen and (max-width: 380px) {
-		#dataTest {
+		#data {
 			display: grid;
 			grid-template-columns: auto;
 			grid-gap: 10px;
