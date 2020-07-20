@@ -209,8 +209,8 @@ body {
 			border-radius: 5px;				
 		}
 	}
-	
-		@media screen and (max-width: 380px) {
+
+	@media screen and (max-width: 380px) {
 		#data {
 			display: grid;
 			grid-template-columns: auto;
@@ -218,10 +218,25 @@ body {
 		}
 
 		.team-card {
-			max-width: 330px;
+			max-width: 360px;
 			height: 335px;
 			background-color: #0A0A0A;
 			color: gray;
 			border-radius: 5px;				
 		}
-	}
+
+		@media screen and (max-width: 360px) {
+			#data {
+				display: grid;
+				grid-template-columns: auto;
+				grid-gap: 10px;
+			}
+
+			.team-card {
+				max-width: 330px;
+				height: 335px;
+				background-color: #0A0A0A;
+				color: gray;
+				border-radius: 5px;				
+			}
+		}
